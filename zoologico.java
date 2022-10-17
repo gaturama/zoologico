@@ -96,7 +96,7 @@ public class Zoologico{
 
     public static void cadastrarLimpeza(Scanner scanner){
         System.out.println("Cadastro da Limpeza");
-        System.out.println("Digite o ID da Limpeza");
+        System.out.println("Digite o ID da Limpeza: ");
         int id = scanner.nextInt();
         System.out.println("Digite a Data da Limpeza: ");
         String data = scanner.next();
