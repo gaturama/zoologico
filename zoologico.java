@@ -7,11 +7,13 @@ public class Zoologico{
         int opcao = 0;
         Scanner scanner = new Scanner(System.in);
         do{
+            System.out.println("=============================");
             System.out.println("1 - Cadastrar Animais: ");
             System.out.println("2 - Cadastrar Jaula: ");
             System.out.println("3 - Cadastrar Alimentação: ");
             System.out.println("4 - Cadastrar Limpeza: ");
             System.out.println("0 - Sair");
+            System.out.println("=============================");
             System.out.println("Opção: ");
             opcao = scanner.nextInt();
             switch(opcao){
