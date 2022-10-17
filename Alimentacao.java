@@ -6,7 +6,7 @@ public class Alimentacao {
     public String data;
     public String descricao;
 
-    public static ArrayList<Alimentacao> alimentacao = new Arraylist<>();
+    public static ArrayList<Alimentacao> alimentacao = new ArrayList<>();
 
     public Alimentacao(
         int id,
