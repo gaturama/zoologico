@@ -82,7 +82,6 @@ public class Zoologico{
         String descricao = scanner.next();
 
         Alimentacao alimentacao = new Alimentacao(id, data, descricao);
-        
             System.out.println(
                 "ID: " + alimentacao.id + "\n"
                 + "Data: " + alimentacao.data + "\n"
@@ -92,7 +91,7 @@ public class Zoologico{
 
          
     }
-    
+
     public static void cadastrarLimpeza(Scanner scanner){
         System.out.println("Cadastro da Limpeza");
         System.out.println("Digite o ID da Limpeza");
@@ -103,7 +102,6 @@ public class Zoologico{
         String descricao = scanner.next();
 
         Limpeza limpeza = new Limpeza(id, data, descricao);
-
         System.out.println(
             "ID: " + limpeza.id + "\n"
             + "Data: " + limpeza.data + "\n"
