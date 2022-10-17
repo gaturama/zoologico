@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class zoologico{
+public class Zoologico{
 
     public static void main(String[]args){
         System.out.println("Zoológico");
@@ -22,7 +22,7 @@ public class zoologico{
                     cadastrarJaula(scanner);
                     break;
                 case 3: 
-                    cadastrarAlimentação(scanner);
+                    cadastrarAlimentacao(scanner);
                     break;
                 case 4: 
                     cadastrarLimpeza(scanner); 
@@ -72,7 +72,46 @@ public class zoologico{
         );
     }
 
-    public static void cadastrarAlimentação(Scanner scanner){
+    public static void cadastrarAlimentacao(Scanner scanner){
         System.out.println("Cadastro de Alimentação");
-        System.out.println("Digite o ID do Alimentação: "); 
+        System.out.println("Digite o ID da Alimentação: "); 
+        int id = scanner.nextInt();
+        System.out.println("Digite a Data da Alimentação: ");
+        String data = scanner.next();
+        System.out.println("Digite a Descrição da Alimentação: ");
+        String descricao = scanner.next();
+
+        Alimentacao alimentacao = new Alimentacao(id, data, descricao);
+        
+            System.out.println(
+                "ID: " + alimentacao.id + "\n"
+                + "Data: " + alimentacao.data + "\n"
+                + "Descrição: " + alimentacao.descricao + "\n"
+
+            );
+
+         
+    }
+    
+    public static void cadastrarLimpeza(Scanner scanner){
+        System.out.println("Cadastro da Limpeza");
+        System.out.println("Digite o ID da Limpeza");
+        int id = scanner.nextInt();
+        System.out.println("Digite a Data da Limpeza: ");
+        String data = scanner.next();
+        System.out.println("Digite a Descrição da Limpeza: ");
+        String descricao = scanner.next();
+
+        Limpeza limpeza = new Limpeza(id, data, descricao);
+
+        System.out.println(
+            "ID: " + limpeza.id + "\n"
+            + "Data: " + limpeza.data + "\n"
+            + "Descrição: " + limpeza.descricao + "\n"
+        );
+
+        
+    }
 }
+    
+

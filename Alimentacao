@@ -1,10 +1,14 @@
-public class alimentacao {
+import java.util.ArrayList;
+
+public class Alimentacao {
     
     public int id;
     public String data;
     public String descricao;
 
-    public alimentacao(
+    public static ArrayList<Alimentacao> alimentacao = new Arraylist<>();
+
+    public Alimentacao(
         int id,
         String data,
         String descricao
