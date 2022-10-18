@@ -17,5 +17,7 @@ public class Limpeza{
         this.data = data;
         this.descricao = descricao;
 
+        limpeza.add(this);
+
     }
 }

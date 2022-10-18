@@ -17,6 +17,7 @@ public class Alimentacao {
         this.data = data;
         this.descricao = descricao;
 
+        alimentacao.add(this);
    }
 
    @Override

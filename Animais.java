@@ -17,6 +17,7 @@ public class Animais {
             this.nome = nome;
             this.especie = especie;
             
+            animais.add(this);
         }
     
         @Override
