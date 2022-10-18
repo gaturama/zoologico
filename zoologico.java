@@ -78,6 +78,7 @@ public class Zoologico{
 
     public static void listarAnimais(){
         for(Animais animais : Animais.animais){
+            System.out.println("Animais");
             System.out.println(
                 "ID: " + animais.id + "\n"
                 + "Nome: " + animais.nome + "\n"
@@ -109,6 +110,7 @@ public class Zoologico{
 
     public static void listarJaula(){
         for(Jaula jaula : Jaula.jaulas){
+            System.out.println("Jaula");
             System.out.println(
                 "ID: " + jaula.id + "\n"
                 + "Nome: " + jaula.nome + "\n"
@@ -142,6 +144,7 @@ public class Zoologico{
 
     public static void listarAlimentacao(){
         for(Alimentacao alimentacao : Alimentacao.alimentacao){
+            System.out.println("Alimentação");
             System.out.println(
                 "ID: " + alimentacao.id + "\n"
                 + "Data: " + alimentacao.data + "\n"
@@ -174,6 +177,7 @@ public class Zoologico{
 
     public static void listarLimpeza(){
         for(Limpeza limpeza : Limpeza.limpeza){
+            System.out.println("Limpeza");
             System.out.println(
                 "ID: " + limpeza.id + "\n"
                 + "Data: " + limpeza.data + "\n"
