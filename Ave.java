@@ -13,5 +13,19 @@ public class Ave extends Animal{
         aves.add(this);
     }
 
-    p
+    public String getPenugem(){
+        return penugem;
+    }
+    
+    public static void setPenugem(String penugem) {
+        this.penugem = penugem;
+    }
+    
+    @Override 
+    public String toString() {
+        return "ID: " + super.getId() + "\n"
+        + "Nome: " + super.getNome() + "\n"
+        + "Espécie: " + super.getEspecie() + "\n"
+        + "Penugem: " + this.getPenugem() + "\n"    
+    }        
 }
