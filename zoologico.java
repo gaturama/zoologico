@@ -94,7 +94,7 @@ public class Zoologico{
         Limpeza idLimpezaVerificada = Limpeza.verificaId(idLimpeza);
 
 
-        Jaula jaula = new Jaula(idLimpeza, nome, tipo, idLimpezaVerificada);
+        new Jaula(idLimpeza, nome, tipo, idLimpezaVerificada);
         }catch (Exception e ){
             System.out.println("Erro ao cadastrar a Jaula");
         }
@@ -103,12 +103,8 @@ public class Zoologico{
     public static void listarJaula(){
         for(Jaula jaula : Jaula.jaulas){
             System.out.println("Jaula");
-            System.out.println(
-                "ID: " + jaula.id + "\n"
-                + "Nome: " + jaula.nome + "\n"
-                + "Tipo: " + jaula.tipo + "\n"
-                + "Id da limpeza: " + jaula.getLimpeza()
-            );
+            System.out.println(jaula);
+               
         }
     }
 
@@ -122,14 +118,7 @@ public class Zoologico{
         System.out.println("Digite a Descrição da Alimentação: ");
         String descricao = scanner.next();
 
-        Alimentacao alimentacao = new Alimentacao(id, data, descricao);
-            System.out.println(
-                "ID: " + alimentacao.id + "\n"
-                + "Data: " + alimentacao.data + "\n"
-                + "Descrição: " + alimentacao.descricao + "\n"
-
-            );
-
+        new Alimentacao(id, data, descricao);
         }catch (Exception e){
             System.out.println("Erro ao cadastrar a Alimentacao");
         }
@@ -138,11 +127,7 @@ public class Zoologico{
     public static void listarAlimentacao(){
         for(Alimentacao alimentacao : Alimentacao.alimentacao){
             System.out.println("Alimentação");
-            System.out.println(
-                "ID: " + alimentacao.id + "\n"
-                + "Data: " + alimentacao.data + "\n"
-                + "Descrição: " + alimentacao.descricao + "\n"
-            );
+            System.out.println(alimentacao);
         }
     }
 
@@ -156,13 +141,7 @@ public class Zoologico{
         System.out.println("Digite a Descrição da Limpeza: ");
         String descricao = scanner.next();
 
-        Limpeza limpeza = new Limpeza(id, data, descricao);
-        System.out.println(
-            "ID: " + limpeza.id + "\n"
-            + "Data: " + limpeza.data + "\n"
-            + "Descrição: " + limpeza.descricao + "\n"
-        );
-
+        new Limpeza(id, data, descricao);
         }catch (Exception e ){
             System.out.println("Erro ao cadastrar a Limpeza");
     }
@@ -171,11 +150,8 @@ public class Zoologico{
     public static void listarLimpeza(){
         for(Limpeza limpeza : Limpeza.limpeza){
             System.out.println("Limpeza");
-            System.out.println(
-                "ID: " + limpeza.id + "\n"
-                + "Data: " + limpeza.data + "\n"
-                + "Descrição: " + limpeza.descricao + "\n"
-            );
+            System.out.println(limpeza);
+  
         }    
     }
 }
