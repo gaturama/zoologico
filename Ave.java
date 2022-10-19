@@ -17,7 +17,7 @@ public class Ave extends Animal{
         return penugem;
     }
     
-    public static void setPenugem(String penugem) {
+    public void setPenugem(String penugem) {
         this.penugem = penugem;
     }
     
@@ -26,6 +26,6 @@ public class Ave extends Animal{
         return "ID: " + super.getId() + "\n"
         + "Nome: " + super.getNome() + "\n"
         + "Espécie: " + super.getEspecie() + "\n"
-        + "Penugem: " + this.getPenugem() + "\n"    
+        + "Penugem: " + this.getPenugem() + "\n";
     }        
 }

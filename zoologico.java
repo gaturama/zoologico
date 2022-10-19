@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Zoologico{
+public class zoologico{
 
     public static void main(String[]args){
         System.out.println("Zoológico");
@@ -8,41 +8,57 @@ public class Zoologico{
         Scanner scanner = new Scanner(System.in);
         do{
             System.out.println("=============================");
-            System.out.println("1 - Cadastrar Animais: ");
-            System.out.println("2 - Listar Animais: ");
-            System.out.println("3 - Cadastrar Jaula: ");
-            System.out.println("4 - Listar Jaula: ");
-            System.out.println("5 - Cadastrar Alimentação: ");
-            System.out.println("6 - Listar Alimentação: ");
-            System.out.println("7 - Cadastrar Limpeza: ");
-            System.out.println("8 - Listar Limpeza: ");
+            System.out.println("1 - Cadastrar Mamifero: ");
+            System.out.println("2 - Listar Mamifero: ");
+            System.out.println("3 - Cadastrar Reptil: ");
+            System.out.println("4 - Listar Reptil: ");
+            System.out.println("5 - Cadastrar Ave: ");
+            System.out.println("6 - Listar Ave: ");
+            System.out.println("7 - Cadastrar Jaula: ");
+            System.out.println("8 - Listar Jaula: ");
+            System.out.println("9 - Cadastrar Alimentação: ");
+            System.out.println("10 - Listar Alimentação: ");
+            System.out.println("11 - Cadastrar Limpeza: ");
+            System.out.println("12 - Listar Limpeza: ");
             System.out.println("0 - Sair");
             System.out.println("=============================");
             System.out.println("Opção: ");
             opcao = scanner.nextInt();
             switch(opcao){
                 case 1:
-                    cadastrarAnimais(scanner);
+                    cadastrarMamifero(scanner);
                     break;
                 case 2:
                     listarMamifero();
+                    break;
+                case 3:
+                    cadastrarReptil(scanner);
                     break;    
-                case 3: 
+                case 4:
+                    listarReptil(scanner);
+                    break;
+                case 5: 
+                    cadastrarAve(scanner);
+                    break;    
+                case 6: 
+                    listarAve(scanner);
+                    break;
+                case 7: 
                     cadastrarJaula(scanner);
                     break;
-                case 4:
+                case 8:
                     listarJaula();
                     break;    
-                case 5: 
+                case 9: 
                     cadastrarAlimentacao(scanner);
                     break;
-                case 6: 
+                case 10: 
                     listarAlimentacao();
                     break;    
-                case 7: 
+                case 11: 
                     cadastrarLimpeza(scanner); 
                     break;
-                case 8:
+                case 12:
                     listarLimpeza();
                     break;    
                 case 0: 
@@ -55,7 +71,7 @@ public class Zoologico{
         scanner.close();
     }
 
-    public static void cadastrarAnimais(Scanner scanner){
+    public static void cadastrarMamifero(Scanner scanner){
         try{
         System.out.println("Cadastro de Mamifero");
         System.out.println("Digite o ID do Animal: ");
@@ -79,6 +95,56 @@ public class Zoologico{
             System.out.println(mamifero);
         }
     }
+    public static void cadastrarReptil(Scanner scanner){
+        try{
+        System.out.println("Cadastro de Réptil");
+        System.out.println("Digite o ID do Réptil: ");
+        int id = scanner.nextInt();
+        System.out.println("Nome: ");
+        String nome = scanner.next();
+        System.out.println("Espécie: ");
+        String especie = scanner.next();
+        System.out.println("Digite a escama: ");
+        String escama = scanner.next();
+
+        new Reptil(id, nome, especie, escama);
+        }catch (Exception e ){
+            System.out.println("Erro ao cadastrar o Reptil");
+        }
+    }
+    public static void listarReptil(Scanner scanner){
+        for(Reptil reptil : Reptil.repteis){
+            System.out.println("Reptil");
+            System.out.println(reptil);
+        }
+
+    }
+
+    public static void cadastrarAve(Scanner scanner){
+        try{
+        System.out.println("Cadastro de Ave");
+        System.out.println("Digite o ID do Ave: ");
+        int id = scanner.nextInt();
+        System.out.println("Nome: ");
+        String nome = scanner.next();
+        System.out.println("Espécie: ");
+        String especie = scanner.next();
+        System.out.println("Digite a penugem: ");
+        String penugem = scanner.next();
+
+        new Ave(id, nome, especie, penugem);
+        }catch (Exception e ){
+            System.out.println("Erro ao cadastrar o Ave");       
+        }    
+    }
+        public static void listarAve(Scanner scanner){
+            for(Ave ave : Ave.aves){
+                System.out.println("Ave");
+                System.out.println(ave);
+            }
+        }
+
+
 
     public static void cadastrarJaula(Scanner scanner){
         try{
@@ -155,3 +221,4 @@ public class Zoologico{
         }    
     }
 }
+

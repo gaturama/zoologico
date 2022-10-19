@@ -29,12 +29,19 @@ public class Jaula {
 
     @Override 
     public String toString() {
-        return "Nome: " + this.nome
-        + "\nTipo: " + this.tipo;
+        return "\nId: " + this.idLimpeza
+        + "Nome: " + this.nome
+        + "\nTipo: " + this.tipo
+        + "\nLimpeza: " + this.idLimpeza;
+        
     }
 
     public int getLimpeza() {
         return idLimpeza;
+    }
+
+    public void setLimpeza(int idLimpeza) {
+        this.idLimpeza = idLimpeza;
     }
 }
     

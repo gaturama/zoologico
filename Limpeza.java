@@ -20,6 +20,27 @@ public class Limpeza{
         limpeza.add(this);
 
     }
+    @Override
+    public String toString() {
+        return "Id: " + this.id + "\n"
+        +  "Data: " + this.data + "\n"
+        + "Descrição: " + this.descricao + "\n";
+    }
+    public int getId() {
+        return this.id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
+    public String getData() {
+        return this.data;
+    }
+    public void setData(String data) {
+        this.data = data;
+    }
+    public String getDescricao() {
+        return this.descricao;
+    }
 
     public static Limpeza verificaId(int id) throws Exception{
         for (Limpeza limpeza : limpeza) {

@@ -25,6 +25,6 @@ public class Reptil extends Animal{
         return "ID: " + super.getId() + "\n"
         + "Nome: " + super.getNome() + "\n" 
         + "Espécie: " + super.getEspecie() + "\n"
-        + "Escama: " + this.Escama() + "\n";
+        + "Escama: " + this.getEscama() + "\n";
     }
 }    
