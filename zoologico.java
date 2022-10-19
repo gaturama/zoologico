@@ -25,7 +25,7 @@ public class Zoologico{
                     cadastrarAnimais(scanner);
                     break;
                 case 2:
-                    listarAnimais();
+                    listarMamifero();
                     break;    
                 case 3: 
                     cadastrarJaula(scanner);
@@ -57,33 +57,26 @@ public class Zoologico{
 
     public static void cadastrarAnimais(Scanner scanner){
         try{
-        System.out.println("Cadastro de Animais");
+        System.out.println("Cadastro de Mamifero");
         System.out.println("Digite o ID do Animal: ");
         int id = scanner.nextInt();
         System.out.println("Nome: ");
         String nome = scanner.next();
         System.out.println("Espécie: ");
         String especie = scanner.next();
+        System.out.println("Digite a pelagem: ");
+        String pelagem = scanner.next();
 
-        Animais animais = new Animais(id, nome, especie);
-        System.out.println(
-            "ID: " + animais.id + "\n"
-            + "Nome: " + animais.nome + "\n"
-            + "Espécie: " + animais.especie + "\n"
-        );
+        new Mamifero(id, nome, especie, pelagem);
         }catch (Exception e ){
             System.out.println("Erro ao cadastrar o Animal");
         }
     }
 
-    public static void listarAnimais(){
-        for(Animais animais : Animais.animais){
-            System.out.println("Animais");
-            System.out.println(
-                "ID: " + animais.id + "\n"
-                + "Nome: " + animais.nome + "\n"
-                + "Espécie: " + animais.especie + "\n"
-            );
+    public static void listarMamifero(){
+        for(Mamifero mamifero : Mamifero.mamiferos){
+            System.out.println("Mamiferos");
+            System.out.println(mamifero);
         }
     }
 
@@ -96,8 +89,12 @@ public class Zoologico{
         String nome = scanner.next();
         System.out.println("Tipo: ");
         String tipo = scanner.next();
+        System.out.println("Digite o id da limpeza:");
+        int idLimpeza = scanner.nextInt();
+        Limpeza idLimpezaVerificada = Limpeza.verificaId(idLimpeza);
 
-        Jaula jaula = new Jaula(id, nome, tipo);
+
+        Jaula jaula = new Jaula(idLimpeza, nome, tipo, idLimpezaVerificada);
         System.out.println(
             "ID: " + jaula.id + "\n"
             +"Nome: " + jaula.nome + "\n"
@@ -115,6 +112,7 @@ public class Zoologico{
                 "ID: " + jaula.id + "\n"
                 + "Nome: " + jaula.nome + "\n"
                 + "Tipo: " + jaula.tipo + "\n"
+                + "Id da limpeza: " + jaula.getLimpeza()
             );
         }
     }

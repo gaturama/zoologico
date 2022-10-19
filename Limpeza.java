@@ -20,4 +20,13 @@ public class Limpeza{
         limpeza.add(this);
 
     }
+
+    public static Limpeza verificaId(int id) throws Exception{
+        for (Limpeza limpeza : limpeza) {
+            if (limpeza.id == id) {
+                return limpeza;
+            }
+        }
+        throw new Exception("Limpeza não encontrado");
+    }
 }

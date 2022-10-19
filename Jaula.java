@@ -2,20 +2,26 @@ import java.util.ArrayList;
 
 public class Jaula {
     
-    public int id;
-    public String nome;
-    public String tipo;
+    private int id;
+    private String nome;
+    private String tipo;
+
+    private int idLimpeza;
+    private Limpeza limpeza;
 
     public static ArrayList<Jaula> jaulas = new ArrayList<Jaula>();
 
     public Jaula(
         int id,
         String nome,
-        String tipo
+        String tipo,
+        Limpeza limpeza
     ){
         this.id =id;
         this.nome = nome;
         this.tipo = tipo;
+        this.limpeza = limpeza;
+        this.idLimpeza = limpeza.id;
     
         jaulas.add(this);
 
@@ -25,6 +31,10 @@ public class Jaula {
     public String toString() {
         return "Nome: " + this.nome
         + "\nTipo: " + this.tipo;
+    }
+
+    public int getLimpeza() {
+        return idLimpeza;
     }
 }
     
