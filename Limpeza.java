@@ -2,9 +2,9 @@ import java.util.ArrayList;
 
 public class Limpeza{
 
-    public int id;
-    public String data;
-    public String descricao;
+    private int id;
+    private String data;
+    private String descricao;
 
     public static ArrayList<Limpeza> limpeza = new ArrayList<>();
     

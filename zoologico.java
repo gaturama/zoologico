@@ -95,11 +95,6 @@ public class Zoologico{
 
 
         Jaula jaula = new Jaula(idLimpeza, nome, tipo, idLimpezaVerificada);
-        System.out.println(
-            "ID: " + jaula.id + "\n"
-            +"Nome: " + jaula.nome + "\n"
-            +"Tipo: " + jaula.tipo + "\n"
-        );
         }catch (Exception e ){
             System.out.println("Erro ao cadastrar a Jaula");
         }
