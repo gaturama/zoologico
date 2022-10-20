@@ -22,7 +22,7 @@ public class zoologico{
             System.out.println("12 - Listar Limpeza: ");
             System.out.println("0 - Sair");
             System.out.println("=============================");
-            System.out.println("Opção: ");
+            System.out.println("Opção:");
             opcao = scanner.nextInt();
             switch(opcao){
                 case 1:
