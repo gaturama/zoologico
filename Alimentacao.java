@@ -20,6 +20,11 @@ public class Alimentacao {
         alimentacao.add(this);
    }
 
+   public static void removeAlimentacao(int id) throws Exception {
+    alimentacao.remove(id);
+
+   }
+
    @Override
     public String toString() {
         return  "Data: " + this.data
