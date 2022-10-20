@@ -13,7 +13,7 @@ public class Alimentacao {
         String data,
         String descricao
    ){
-        this.id =id;
+        this.id = id;
         this.data = data;
         this.descricao = descricao;
 
@@ -24,5 +24,12 @@ public class Alimentacao {
     public String toString() {
         return  "Data: " + this.data
         + "\nDescrição: " + this.descricao;
+    }
+
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
     }
 }

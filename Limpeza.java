@@ -5,17 +5,24 @@ public class Limpeza{
     private int id;
     private String data;
     private String descricao;
+    private int idJaula;
+    private Jaula jaula;
 
     public static ArrayList<Limpeza> limpeza = new ArrayList<>();
     
     public Limpeza(
         int id, 
         String data,
-        String descricao
+        String descricao,
+        Jaula jaula
     ){
         this.id = id;
         this.data = data;
         this.descricao = descricao;
+        this.idJaula = jaula.getId();
+        this.jaula = jaula;
+
+        jaula.setLimpeza(this);
 
         limpeza.add(this);
 
@@ -24,7 +31,8 @@ public class Limpeza{
     public String toString() {
         return "Id: " + this.id + "\n"
         +  "Data: " + this.data + "\n"
-        + "Descrição: " + this.descricao + "\n";
+        + "Descrição: " + this.descricao + "\n"
+        + "Id da Jaula: " + this.idJaula + "\n";
     }
     public int getId() {
         return this.id;

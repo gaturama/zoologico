@@ -7,6 +7,7 @@ public class Jaula {
     private String tipo;
 
     private int idLimpeza;
+    private ArrayList<Limpeza> limpezas;
     private Limpeza limpeza;
 
     public static ArrayList<Jaula> jaulas = new ArrayList<Jaula>();
@@ -21,7 +22,9 @@ public class Jaula {
         this.nome = nome;
         this.tipo = tipo;
         this.limpeza = limpeza;
-        this.idLimpeza = limpeza.id;
+        this.idLimpeza = limpeza.getId();
+
+        this.limpezas = new ArrayList<Limpeza>();
     
         jaulas.add(this);
 
@@ -29,11 +32,15 @@ public class Jaula {
 
     @Override 
     public String toString() {
-        return "\nId: " + this.idLimpeza
+        return "\nId: " + this.id
         + "Nome: " + this.nome
         + "\nTipo: " + this.tipo
         + "\nLimpeza: " + this.idLimpeza;
         
+    }
+
+    public int getId() {
+        return this.id;
     }
 
     public int getLimpeza() {
@@ -42,6 +49,10 @@ public class Jaula {
 
     public void setLimpeza(int idLimpeza) {
         this.idLimpeza = idLimpeza;
+    }
+
+    public void setLimpeza(Limpeza limpeza) {
+        this.limpezas.add(limpeza);
     }
 }
     

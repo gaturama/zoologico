@@ -160,7 +160,7 @@ public class zoologico{
         Limpeza idLimpezaVerificada = Limpeza.verificaId(idLimpeza);
 
 
-        new Jaula(idLimpeza, nome, tipo, idLimpezaVerificada);
+        new Jaula(id, nome, tipo, idLimpezaVerificada);
         }catch (Exception e ){
             System.out.println("Erro ao cadastrar a Jaula");
         }
@@ -207,7 +207,7 @@ public class zoologico{
         System.out.println("Digite a Descrição da Limpeza: ");
         String descricao = scanner.next();
 
-        new Limpeza(id, data, descricao);
+        new Limpeza(id, data, descricao, null);
         }catch (Exception e ){
             System.out.println("Erro ao cadastrar a Limpeza");
     }
@@ -221,4 +221,3 @@ public class zoologico{
         }    
     }
 }
-
