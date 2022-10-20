@@ -42,13 +42,25 @@ public class Jaula {
     public int getId() {
         return this.id;
     }
+    public void setId(int id) {
+        this.id = id;
+    }
+    public String getNome() {
+        return this.nome;
+    }   
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    
+    public String getTipo() {
+        return this.tipo;
+    }
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
 
     public int getLimpeza() {
         return idLimpeza;
-    }
-
-    public void setLimpeza(int idLimpeza) {
-        this.idLimpeza = idLimpeza;
     }
 
     public void setLimpeza(Limpeza limpeza) {
