@@ -35,13 +35,13 @@ public class zoologico{
                     cadastrarReptil(scanner);
                     break;    
                 case 4:
-                    listarReptil(scanner);
+                    listarReptil();
                     break;
                 case 5: 
                     cadastrarAve(scanner);
                     break;    
                 case 6: 
-                    listarAve(scanner);
+                    listarAve();
                     break;
                 case 7: 
                     cadastrarJaula(scanner);
@@ -112,7 +112,7 @@ public class zoologico{
             System.out.println("Erro ao cadastrar o Reptil");
         }
     }
-    public static void listarReptil(Scanner scanner){
+    public static void listarReptil(){
         for(Reptil reptil : Reptil.repteis){
             System.out.println("Reptil");
             System.out.println(reptil);
@@ -137,7 +137,7 @@ public class zoologico{
             System.out.println("Erro ao cadastrar o Ave");       
         }    
     }
-        public static void listarAve(Scanner scanner){
+        public static void listarAve(){
             for(Ave ave : Ave.aves){
                 System.out.println("Ave");
                 System.out.println(ave);
