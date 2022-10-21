@@ -20,6 +20,10 @@ public class Reptil extends Animal{
         this.escama = escama;
     }
     
+    public static void removeReptil(int id) throws Exception {
+        repteis.remove(id);
+    } 
+
     @Override
     public String toString(){
         return "ID: " + super.getId() + "\n"

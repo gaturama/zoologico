@@ -21,6 +21,10 @@ public class Ave extends Animal{
         this.penugem = penugem;
     }
     
+    public static void removeAve(int id) throws Exception{
+        aves.remove(id);
+    }
+
     @Override 
     public String toString() {
         return "ID: " + super.getId() + "\n"

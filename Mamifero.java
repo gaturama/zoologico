@@ -19,6 +19,10 @@ public class Mamifero extends Animal{
     public void setPelagem(String pelagem) {
         this.pelagem = pelagem;
     }
+    public static void removeMamifero(int id) throws Exception{
+        mamiferos.remove(id);
+    }
+
 
     @Override
     public String toString() {

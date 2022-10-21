@@ -95,6 +95,20 @@ public class zoologico{
             System.out.println(mamifero);
         }
     }
+
+    public static void removeMamifero (Scanner scanner) {
+        System.out.println("Remover Mamifero");
+        System.out.println("Informe a espécie: ");
+        String especie = scanner.next();
+        System.out.println("Digite o Id do Mamifero: ");
+        int idMamifero = scanner.nextInt();
+        try{
+            Mamifero.removeMamifero(idMamifero);
+        }catch (Exception e ){
+            System.out.println(e.getMessage());
+    }
+    }
+
     public static void cadastrarReptil(Scanner scanner){
         try{
         System.out.println("Cadastro de Réptil");
@@ -118,6 +132,18 @@ public class zoologico{
             System.out.println(reptil);
         }
 
+    }
+    public static void removeReptil (Scanner scanner) {
+        System.out.println("Remover Reptil");
+        System.out.println("Informe a espécie: ");
+        String especie = scanner.next();
+        System.out.println("Digite o Id do Mamifero: ");
+        int idReptil = scanner.nextInt();
+        try{
+            Reptil.removeReptil(idReptil);
+        }catch (Exception e ){
+            System.out.println(e.getMessage());
+    }
     }
 
     public static void cadastrarAve(Scanner scanner){
@@ -144,6 +170,18 @@ public class zoologico{
             }
         }
 
+        public static void removeAve (Scanner scanner) {
+            System.out.println("Remover Ave");
+            System.out.println("Informe a espécie: ");
+            String especie = scanner.next();
+            System.out.println("Digite o Id do Mamifero: ");
+            int idAve = scanner.nextInt();
+            try{
+                Ave.removeAve(idAve);
+            }catch (Exception e ){
+                System.out.println(e.getMessage());
+        }
+        }
 
 
     public static void cadastrarJaula(Scanner scanner){
