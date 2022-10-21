@@ -5,8 +5,8 @@ public class Limpeza{
     private int id;
     private String data;
     private String descricao;
-    private int idJaula;
     private Jaula jaula;
+    private ArrayList<Jaula> jaulas = new ArrayList<Jaula>();
 
     public static ArrayList<Limpeza> limpeza = new ArrayList<>();
     
@@ -19,7 +19,6 @@ public class Limpeza{
         this.id = id;
         this.data = data;
         this.descricao = descricao;
-        this.idJaula = jaula.getId();
         this.jaula = jaula;
 
         jaula.setLimpeza(this);
@@ -29,10 +28,10 @@ public class Limpeza{
     }
     @Override
     public String toString() {
-        return "Id: " + this.id + "\n"
-        +  "Data: " + this.data + "\n"
-        + "Descrição: " + this.descricao + "\n"
-        + "Id da Jaula: " + this.idJaula + "\n";
+        return "Id: " + id + "\n"
+        +  "Data: " + data + "\n"
+        + "Descrição: " + descricao + "\n"
+        + "Jaula: " + jaula + "\n";
     }
     public int getId() {
         return this.id;
@@ -48,6 +47,12 @@ public class Limpeza{
     }
     public String getDescricao() {
         return this.descricao;
+    }
+    public String getJaula(){
+        return jaula.getNome();
+    } 
+    public void setJaula(Jaula jaula){
+        this.jaulas.add(jaula);
     }
 
     public static Limpeza verificaId(int id) throws Exception{

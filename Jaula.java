@@ -8,7 +8,6 @@ public class Jaula {
 
     private int idLimpeza;
     private ArrayList<Limpeza> limpezas;
-    private Limpeza limpeza;
 
     public static ArrayList<Jaula> jaulas = new ArrayList<Jaula>();
 
@@ -21,7 +20,6 @@ public class Jaula {
         this.id =id;
         this.nome = nome;
         this.tipo = tipo;
-        this.limpeza = limpeza;
         this.idLimpeza = limpeza.getId();
 
         this.limpezas = new ArrayList<Limpeza>();
