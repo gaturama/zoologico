@@ -6,7 +6,12 @@ public class Reptil extends Animal{
     
     public static ArrayList<Reptil> repteis = new ArrayList<Reptil>();
     
-    public Reptil(int id, String nome, String especie, String escama) {
+    public Reptil(
+        int id, 
+        String nome, 
+        String especie, 
+        String escama
+    ){
         super(id, nome, especie);
         this.setEscama(escama);
         
@@ -21,7 +26,8 @@ public class Reptil extends Animal{
     }
     
     public static void removeReptil(int id) throws Exception {
-        repteis.remove(id);
+        Reptil reptil = getReptil(id);
+        repteis.remove(reptil);
     } 
 
     @Override
