@@ -6,7 +6,12 @@ public class Ave extends Animal{
 
     public static ArrayList<Ave> aves = new ArrayList<Ave>();
 
-    public Ave(int id, String nome, String especie, String penugem){
+    public Ave(
+        int id, 
+        String nome, 
+        String especie, 
+        String penugem
+    ){
         super(id, nome, especie);
         this.penugem = penugem;
 
@@ -22,7 +27,8 @@ public class Ave extends Animal{
     }
     
     public static void removeAve(int id) throws Exception{
-        aves.remove(id);
+        Ave ave = getAve(id);
+        aves.remove(ave);
     }
 
     @Override 
