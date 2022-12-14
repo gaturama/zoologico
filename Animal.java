@@ -37,12 +37,25 @@ public abstract class Animal {
         public String getEspecie() {
             return especie;
         }
+        
+       public static Animal verificarId(int id) throws Exception{
+         for(Animal animal : animais){
+           if(animal.id = id){
+              return animal;
+           }
+         }
+         throw new Exception("Este animal não existe!");
+         }
+ 
+       public static removeAnimal(int id) throws Exception{
+         Animal animal = getAnimal(id);
+         animais.remove(animal);
+     }
 
-
-    
         @Override
         public String toString(){
-            return "Nome: " + this.nome
-            + "\nEspecie: " + this.especie;
+            return "Id: " + id + "\n"
+             + "Nome: " + nome + "\n"
+             + "Especie: " + especie;
         }
     }
