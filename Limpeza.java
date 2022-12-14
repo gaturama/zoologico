@@ -5,8 +5,7 @@ public class Limpeza{
     private int id;
     private String data;
     private String descricao;
-    private Jaula jaula;
-    private ArrayList<Jaula> jaulas = new ArrayList<Jaula>();
+    private int idJaula;
 
     public static ArrayList<Limpeza> limpeza = new ArrayList<>();
     
@@ -14,25 +13,17 @@ public class Limpeza{
         int id, 
         String data,
         String descricao,
-        Jaula jaula
+        int idJaula
     ){
         this.id = id;
         this.data = data;
         this.descricao = descricao;
-        this.jaula = jaula;
-
-        jaula.setLimpeza(this);
+        this.idJaula = idJaula;
 
         limpeza.add(this);
 
     }
-    @Override
-    public String toString() {
-        return "Id: " + id + "\n"
-        +  "Data: " + data + "\n"
-        + "Descrição: " + descricao + "\n"
-        + "Jaula: " + jaula + "\n";
-    }
+ 
     public int getId() {
         return this.id;
     }
@@ -48,11 +39,11 @@ public class Limpeza{
     public String getDescricao() {
         return this.descricao;
     }
-    public String getJaula(){
-        return jaula.getNome();
+    public String getIdJaula(){
+        return idJaula;
     } 
-    public void setJaula(Jaula jaula){
-        this.jaulas.add(jaula);
+    public void setJaula(int idJaula){
+        this.idJaula = idJaula
     }
 
     public static Limpeza verificaId(int id) throws Exception{
@@ -62,5 +53,18 @@ public class Limpeza{
             }
         }
         throw new Exception("Limpeza não encontrado");
+    }
+    
+    public static removeLimpeza(int id) throws Exception{
+        Limpeza limpeza = getLimpeza(id);
+        limpezas.remove(limpeza);
+    }
+        
+    @Override
+    public String toString() {
+        return "Id: " + id + "\n"
+        +  "Data: " + data + "\n"
+        + "Descrição: " + descricao + "\n"
+        + "Jaula: " + this.getIdJaula + "\n";
     }
 }
