@@ -2,34 +2,28 @@ import java.util.ArrayList;
 
 public class Alimentacao {
     
-    private int id;
+    private int idAlimentacao;
     private String data;
     private String descricao;
 
-    public static ArrayList<Alimentacao> alimentacao = new ArrayList<>();
+    public static ArrayList<Alimentacao> alimentacoes = new ArrayList<>();
 
     public Alimentacao(
-        int id,
+        int idAlimentacao,
         String data,
         String descricao
    ){
-        this.id = id;
+        this.idAlimentacao = idAlimentacao;
         this.data = data;
         this.descricao = descricao;
 
-        alimentacao.add(this);
+        alimentacoes.add(this);
    }
-
-   public static void removeAlimentacao(int id) throws Exception {
-    alimentacao.remove(id);
-
-   }
-
-    public int getId() {
-        return id;
+    public int getIdAlimentacao(){
+        return idAlimentacao;
     }
-    public void setId(int id) {
-        this.id = id;
+    public void setId(int idAlimentacao){
+        this.idAlimentacao = idAlimentacao;
     }
     public String getData() {
         return data;
@@ -44,10 +38,16 @@ public class Alimentacao {
         this.descricao = descricao;
     }    
     
+    public static void removeAlimentacao(int idAlimentacao) throws Exception{
+        Alimentacao alimentacao = getAlimentacao(idAlimentacao);
+        alimentacao.remove(alimentacao);
+   }
+
+    
     @Override
     public String toString() {
-        return "Id: " + id + "\n"
+        return "Id: " + idAlimentacao + "\n"
         + "Data: " + data + "\n"
-        + "\nDescrição: " + descricao + "\n";
+        + "Descrição: " + descricao + "\n";
     }
 }
