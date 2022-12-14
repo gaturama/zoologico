@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Limpeza{
 
-    private int id;
+    private int idLimpeza;
     private String data;
     private String descricao;
     private int idJaula;
@@ -10,7 +10,7 @@ public class Limpeza{
     public static ArrayList<Limpeza> limpeza = new ArrayList<>();
     
     public Limpeza(
-        int id, 
+        int idLimpeza, 
         String data,
         String descricao,
         int idJaula
@@ -24,11 +24,11 @@ public class Limpeza{
 
     }
  
-    public int getId() {
-        return this.id;
+    public int getIdLimpeza() {
+        return this.idLimpeza;
     }
-    public void setId(int id) {
-        this.id = id;
+    public void setIdLimpeza(int idLimpeza) {
+        this.idLimpeza = idLimpeza;
     }
     public String getData() {
         return this.data;
@@ -46,23 +46,23 @@ public class Limpeza{
         this.idJaula = idJaula
     }
 
-    public static Limpeza verificaId(int id) throws Exception{
+    public static Limpeza verificaId(int idLimpeza) throws Exception{
         for (Limpeza limpeza : limpeza) {
-            if (limpeza.id == id) {
+            if (limpeza.idL == idLimpeza) {
                 return limpeza;
             }
         }
         throw new Exception("Limpeza não encontrado");
     }
     
-    public static removeLimpeza(int id) throws Exception{
-        Limpeza limpeza = getLimpeza(id);
+    public static removeLimpeza(int idLimpeza) throws Exception{
+        Limpeza limpeza = getLimpeza(idLimpeza);
         limpezas.remove(limpeza);
     }
         
     @Override
     public String toString() {
-        return "Id: " + id + "\n"
+        return "Id: " + idLimpeza + "\n"
         +  "Data: " + data + "\n"
         + "Descrição: " + descricao + "\n"
         + "Jaula: " + this.getIdJaula + "\n";
