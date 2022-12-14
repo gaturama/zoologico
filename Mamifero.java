@@ -6,7 +6,12 @@ public class Mamifero extends Animal{
 
     public static ArrayList<Mamifero> mamiferos = new ArrayList<Mamifero>();
 
-    public Mamifero(int id, String nome, String especie, String pelagem) {
+    public Mamifero(
+        int id, 
+        String nome, 
+        String especie, 
+        String pelagem
+    ){
         super(id, nome, especie);
         this.setPelagem(pelagem);
 
@@ -20,6 +25,7 @@ public class Mamifero extends Animal{
         this.pelagem = pelagem;
     }
     public static void removeMamifero(int id) throws Exception{
+        Mamifero mamifero = getMamifero(id);
         mamiferos.remove(id);
     }
 
