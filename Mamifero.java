@@ -26,7 +26,7 @@ public class Mamifero extends Animal{
     }
     public static void removeMamifero(int id) throws Exception{
         Mamifero mamifero = getMamifero(id);
-        mamiferos.remove(id);
+        mamiferos.remove(mamifero);
     }
 
 
