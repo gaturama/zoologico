@@ -2,39 +2,27 @@ import java.util.ArrayList;
 
 public class Jaula {
     
-    private int id;
+    private int idJaula;
     private String nome;
     private String tipo;
 
     private int idLimpeza;
-    private ArrayList<Limpeza> limpezas;
 
     public static ArrayList<Jaula> jaulas = new ArrayList<Jaula>();
 
     public Jaula(
-        int id,
+        int idJaula,
         String nome,
         String tipo,
-        Limpeza limpeza
+        int idLimpeza
     ){
-        this.id =id;
+        this.idJaula =idJaula;
         this.nome = nome;
         this.tipo = tipo;
-        this.idLimpeza = limpeza.getId();
-
-        this.limpezas = new ArrayList<Limpeza>();
+        this.idLimpeza = idLimpeza;
     
         jaulas.add(this);
 
-    }
-
-    @Override 
-    public String toString() {
-        return "\nId: " + this.id
-        + "Nome: " + this.nome
-        + "\nTipo: " + this.tipo
-        + "\nLimpeza: " + this.idLimpeza;
-        
     }
 
     public int getId() {
@@ -61,8 +49,16 @@ public class Jaula {
         return idLimpeza;
     }
 
-    public void setLimpeza(Limpeza limpeza) {
-        this.limpezas.add(limpeza);
+    public void setLimpeza(int idLmpeza) {
+        this.idLimpeza = idLimpeza
+    }
+      @Override 
+    public String toString() {
+        return "\nId: " + this.idJaula
+        + "Nome: " + this.nome
+        + "\nTipo: " + this.tipo
+        + "\nLimpeza: " + this.idLimpeza;
+        
     }
 }
     
