@@ -10,16 +10,22 @@ public class zoologico{
             System.out.println("=============================");
             System.out.println("1 - Cadastrar Mamifero: ");
             System.out.println("2 - Listar Mamifero: ");
-            System.out.println("3 - Cadastrar Reptil: ");
-            System.out.println("4 - Listar Reptil: ");
-            System.out.println("5 - Cadastrar Ave: ");
-            System.out.println("6 - Listar Ave: ");
-            System.out.println("7 - Cadastrar Jaula: ");
-            System.out.println("8 - Listar Jaula: ");
-            System.out.println("9 - Cadastrar Alimentação: ");
-            System.out.println("10 - Listar Alimentação: ");
-            System.out.println("11 - Cadastrar Limpeza: ");
-            System.out.println("12 - Listar Limpeza: ");
+            System.out.println("3 - Remover Mamifero: ");
+            System.out.println("4 - Cadastrar Reptil: ");
+            System.out.println("5 - Listar Reptil: ");
+            System.out.println("6 - Remover Reptil: ");
+            System.out.println("7 - Cadastrar Ave: ");
+            System.out.println("8 - Listar Ave: ");
+            System.out.println("9 - Remover Ave: ");
+            System.out.println("10 - Cadastrar Jaula: ");
+            System.out.println("11 - Listar Jaula: ");
+            System.out.println("12 - Remover Jaula ");
+            System.out.println("13 - Cadastrar Alimentação: ");
+            System.out.println("14 - Listar Alimentação: ");
+            System.out.println("15 - Remover Alimentação: ");
+            System.out.println("16 - Cadastrar Limpeza: ");
+            System.out.println("17 - Listar Limpeza: ");
+            System.out.println("18 - Remover Limpeza: ");
             System.out.println("0 - Sair");
             System.out.println("=============================");
             System.out.println("Opção:");
@@ -31,36 +37,54 @@ public class zoologico{
                 case 2:
                     listarMamifero();
                     break;
-                case 3:
+                case 3: 
+                    removerMamifero(scanner);
+                    break;
+                case 4:
                     cadastrarReptil(scanner);
                     break;    
-                case 4:
+                case 5:
                     listarReptil();
                     break;
-                case 5: 
-                    cadastrarAve(scanner);
-                    break;    
-                case 6: 
-                    listarAve();
+                case 6:
+                    removerReptil(scanner);
                     break;
                 case 7: 
-                    cadastrarJaula(scanner);
-                    break;
-                case 8:
-                    listarJaula();
+                    cadastrarAve(scanner);
                     break;    
+                case 8: 
+                    listarAve();
+                    break;
                 case 9: 
-                    cadastrarAlimentacao(scanner);
+                    removerAve(scanner);
                     break;
                 case 10: 
-                    listarAlimentacao();
+                    cadastrarJaula(scanner);
+                    break;
+                case 11:
+                    listarJaula();
                     break;    
-                case 11: 
+                case 12: 
+                    removerJaula(scanner);
+                    break;
+                case 13: 
+                    cadastrarAlimentacao(scanner);
+                    break;
+                case 14: 
+                    listarAlimentacao();
+                    break;
+                case 15: 
+                    removerAlimentacao(scanner);
+                    break;
+                case 16: 
                     cadastrarLimpeza(scanner); 
                     break;
-                case 12:
+                case 17:
                     listarLimpeza();
-                    break;    
+                    break;
+                case 18:
+                    removerLimpeza(scanner);
+                    break;
                 case 0: 
                     System.out.println("Sair");
                     break;
@@ -96,14 +120,14 @@ public class zoologico{
         }
     }
 
-    public static void removeMamifero (Scanner scanner) {
+    public static void removerMamifero (Scanner scanner) {
         System.out.println("Remover Mamifero");
         System.out.println("Informe a espécie: ");
         String especie = scanner.next();
         System.out.println("Digite o Id do Mamifero: ");
         int idMamifero = scanner.nextInt();
         try{
-            Mamifero.removeMamifero(idMamifero);
+            Mamifero.removerMamifero(idMamifero);
         }catch (Exception e ){
             System.out.println(e.getMessage());
     }
@@ -133,14 +157,14 @@ public class zoologico{
         }
 
     }
-    public static void removeReptil (Scanner scanner) {
+    public static void removerReptil (Scanner scanner) {
         System.out.println("Remover Reptil");
         System.out.println("Informe a espécie: ");
         String especie = scanner.next();
         System.out.println("Digite o Id do Mamifero: ");
         int idReptil = scanner.nextInt();
         try{
-            Reptil.removeReptil(idReptil);
+            Reptil.removerReptil(idReptil);
         }catch (Exception e ){
             System.out.println(e.getMessage());
     }
@@ -170,14 +194,14 @@ public class zoologico{
             }
         }
 
-        public static void removeAve (Scanner scanner) {
+        public static void removerAve (Scanner scanner) {
             System.out.println("Remover Ave");
             System.out.println("Informe a espécie: ");
             String especie = scanner.next();
             System.out.println("Digite o Id do Mamifero: ");
             int idAve = scanner.nextInt();
             try{
-                Ave.removeAve(idAve);
+                Ave.removerAve(idAve);
             }catch (Exception e ){
                 System.out.println(e.getMessage());
         }
@@ -211,6 +235,18 @@ public class zoologico{
                
         }
     }
+    public static void removerJaula(Scanner scanner) {
+            System.out.println("Remover Jaula");
+            System.out.println("Informe o nome: ");
+            String nome = scanner.next();
+            System.out.println("Digite o Id do Jaula: ");
+            int idJaula = scanner.nextInt();
+            try{
+                Jaula.removerAve(idJaula);
+            }catch (Exception e ){
+                System.out.println(e.getMessage());
+        }
+        }
 
     public static void cadastrarAlimentacao(Scanner scanner){
         try{
@@ -234,6 +270,18 @@ public class zoologico{
             System.out.println(alimentacao);
         }
     }
+    public static void removerAlimentacao (Scanner scanner) {
+            System.out.println("Remover Alimentação");
+            System.out.println("Informe a data: ");
+            String especie = scanner.next();
+            System.out.println("Digite o Id da Alimentação: ");
+            int idAlimentacao = scanner.nextInt();
+            try{
+                Alimentacao.removerAlimentacao(idAlimentacao);
+            }catch (Exception e ){
+                System.out.println(e.getMessage());
+        }
+        }
 
     public static void cadastrarLimpeza(Scanner scanner){
         try{
@@ -258,4 +306,16 @@ public class zoologico{
   
         }    
     }
+    public static void removerLimpeza (Scanner scanner) {
+            System.out.println("Remover Limpeza");
+            System.out.println("Informe a data: ");
+            String data = scanner.next();
+            System.out.println("Digite o Id da limpeza: ");
+            int idLimpeza = scanner.nextInt();
+            try{
+                Limpeza.removerLimpeza(idLimpeza);
+            }catch (Exception e ){
+                System.out.println(e.getMessage());
+        }
+        }
 }
